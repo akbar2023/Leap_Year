@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'leapYears';
+
+
+  static leapYear(year: number): string {
+    return ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0)
+    ? (year + ' is a leap year')
+    : (year + ' is a common year');
+    }
 }
